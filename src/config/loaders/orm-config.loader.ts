@@ -24,4 +24,5 @@ export const getOrmConfig = (): PostgresConnectionOptions => ({
 export const ormConfigLoader = registerAs<TGlobalConfig['orm']>(configKeys.ORM, () => ({
     ...getOrmConfig(),
     autoLoadEntities: true,
+    retryAttempts: 5,
 }));
