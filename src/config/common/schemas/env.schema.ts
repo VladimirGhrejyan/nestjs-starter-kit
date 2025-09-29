@@ -17,4 +17,7 @@ export const envSchema = z.object({
     // AUTH
     JWT_SECRET: z.string(),
     JWT_ACCESS_EXPIRES_IN: z.string(),
+
+    // LOGGER
+    LOGGER_DRIVER: z.enum(['nest', 'winston', 'pino']).default('nest'),
 });

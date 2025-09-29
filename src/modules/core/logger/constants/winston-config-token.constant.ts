@@ -1,0 +1,1 @@
+export const WINSTON_CONFIG_TOKEN = Symbol('WINSTON_CONFIG');

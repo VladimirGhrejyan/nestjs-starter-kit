@@ -16,10 +16,16 @@ type AuthConfig = {
     jwtExpiresIn: TEnvironment['JWT_ACCESS_EXPIRES_IN'];
 };
 
+type LoggerConfig = {
+    driver: TEnvironment['LOGGER_DRIVER'];
+};
+
 export type TGlobalConfig = {
     app: AppConfig;
 
     auth: AuthConfig;
 
     orm: TypeOrmModuleOptions;
+
+    logger: LoggerConfig;
 };
