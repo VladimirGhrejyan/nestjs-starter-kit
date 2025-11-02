@@ -5,6 +5,16 @@ export const envSchema = z.object({
     NODE_ENV: z.enum(['development', 'production']),
     APP_URL: z.url(),
     PORT: z.string().transform(Number),
+    SERVE_STATIC_ROOT: z.string().default('/static'),
+    SERVE_STATIC_PATH: z.string().default('static'),
+    APP_TITLE: z.string(),
+    APP_VERSION: z.string(),
+    SWAGGER_UI_PATH: z.string(),
+    OPEN_API_SCHEMA_PATH: z.string(),
+    OPEN_API_SCHEMA_NAME: z.string(),
+    SWAGGER_USERNAME: z.string(),
+    SWAGGER_PASSWORD: z.string(),
+    GLOBAL_PREFIX: z.string(),
 
     // DATABASE
     POSTGRES_HOST: z.string(),

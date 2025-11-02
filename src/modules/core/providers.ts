@@ -1,19 +1,24 @@
 import { Provider } from '@nestjs/common';
 import { APP_FILTER, APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
 
-import { ZodExceptionFilter } from './filters';
-import { LoggingInterceptor } from './interceptors';
-import { ZodValidationPipe } from './pipes';
+import { ExceptionFilter } from './filters';
+import { LoggingInterceptor, SerializerInterceptor } from './interceptors';
+import { ValidationPipe } from './pipes';
 
 export const providers: Provider[] = [
     {
         provide: APP_FILTER,
-        useClass: ZodExceptionFilter,
+        useClass: ExceptionFilter,
     },
 
     {
         provide: APP_PIPE,
-        useClass: ZodValidationPipe,
+        useClass: ValidationPipe,
+    },
+
+    {
+        provide: APP_INTERCEPTOR,
+        useClass: SerializerInterceptor,
     },
 
     {

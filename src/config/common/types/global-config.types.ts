@@ -8,6 +8,26 @@ type AppConfig = {
     port: TEnvironment['PORT'];
 
     appUrl: TEnvironment['APP_URL'];
+
+    serveStaticRoot: TEnvironment['SERVE_STATIC_ROOT'];
+
+    serveStaticPath: TEnvironment['SERVE_STATIC_PATH'];
+
+    appTitle: TEnvironment['APP_TITLE'];
+
+    appVersion: TEnvironment['APP_VERSION'];
+
+    swaggerUIPath: TEnvironment['SWAGGER_UI_PATH'];
+
+    openApiSchemaPath: TEnvironment['OPEN_API_SCHEMA_PATH'];
+
+    openApiSchemaName: TEnvironment['OPEN_API_SCHEMA_NAME'];
+
+    swaggerUsername: TEnvironment['SWAGGER_USERNAME'];
+
+    swaggerPassword: TEnvironment['SWAGGER_PASSWORD'];
+
+    globalPrefix: TEnvironment['GLOBAL_PREFIX'];
 };
 
 type AuthConfig = {

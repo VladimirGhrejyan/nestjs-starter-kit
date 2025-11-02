@@ -5,8 +5,8 @@ import { ZodError as ZodErrorV3 } from 'zod/v3';
 import { ZodError as ZodErrorV4 } from 'zod/v4';
 
 @Catch(HttpException)
-export class ZodExceptionFilter extends BaseExceptionFilter {
-    private readonly logger = new Logger(ZodExceptionFilter.name);
+export class ExceptionFilter extends BaseExceptionFilter {
+    private readonly logger = new Logger(ExceptionFilter.name);
 
     public catch(exception: HttpException, host: ArgumentsHost) {
         if (exception instanceof ZodSerializationException) {

@@ -1,0 +1,1 @@
+export const OPEN_API_CONFIG_TOKEN = Symbol('OPEN_API_CONFIG_TOKEN');
